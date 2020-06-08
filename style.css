@@ -12,17 +12,19 @@ img{
 width: 100px;
 }
 .back-face{
-    background-color: rgb(29, 131, 226);
+    background-color: #0e97e6;
+}
+.front-face{
+    background-color: #0e97e6;
 }
 
 .memory-game{
-border: 2px solid #fff;
 width: 640px;
 height: 640px;
 display: flex;
 flex-wrap: wrap;
 margin: auto;
-perspective: 1000;
+perspective: 1000px;
 }
 
 .memory-card:active{
@@ -37,7 +39,7 @@ margin: 5px;
 position: relative;
 transform: scale(1);
 transform-style: preserve-3d;
-transition: transform.5s;
+transition: transform .5s;
 }
 
 .memory-card.flip{
