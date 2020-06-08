@@ -22,6 +22,7 @@ height: 640px;
 display: flex;
 flex-wrap: wrap;
 margin: auto;
+perspective: 1000;
 }
 
 .memory-card:active{
@@ -35,6 +36,13 @@ height:33.33% - 10px;
 margin: 5px;
 position: relative;
 transform: scale(1);
+transform-style: preserve-3d;
+transition: transform.5s;
+}
+
+.memory-card.flip{
+transform: rotateY(180deg);
+
 }
 
 .front-face,
@@ -44,4 +52,9 @@ transform: scale(1);
     padding: 20px;
     position: absolute;
     border: 2px solid #c91ac0;
+    backface-visibility: hidden;
+}
+
+.front-face{
+    transform: rotateY(180deg);
 }
